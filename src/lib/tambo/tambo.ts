@@ -9,6 +9,7 @@
  */
 
 import Firecrawl from "@/components/firecrawl";
+import ResendEmailForm from "@/components/resend/form";
 import type { TamboComponent } from "@tambo-ai/react";
 import { TamboTool } from "@tambo-ai/react";
 import { z } from "zod";
@@ -21,20 +22,38 @@ import { z } from "zod";
  * can be controlled by AI to dynamically fetch data based on user interactions.
  */
 
-export const tools: TamboTool[] = [];
+export const tools: TamboTool[] = [
+  {
+    name: "test-tool",
+    description: "A tool to test the tooling",
+    tool: async (name: string) => {
+      //artificial delay
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+      return `Hello ${name}`;
+    },
+    toolSchema: z.function().args(z.string()).returns(z.string()),
+  },
+];
 
 /**
  * components
  *
- * This array contains all the Tambo components that are registered for use within the application.
+ * This array contains all the components that are registered for use by Tambo within the application.
  * Each component is defined with its name, description, and expected props. The components
  * can be controlled by AI to dynamically render UI elements based on user interactions.
  */
 export const components: TamboComponent[] = [
   {
     name: "firecrawl",
-    description: "A tool to scrape a website and return the results",
+    description:
+      "A form to enter a url and scrape a website using firecrawl and return the results",
     component: Firecrawl,
+    propsSchema: z.object({}),
+  },
+  {
+    name: "resend",
+    description: "A form to send an email using Resend",
+    component: ResendEmailForm,
     propsSchema: z.object({}),
   },
   // Add more components here
