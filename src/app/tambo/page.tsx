@@ -2,6 +2,7 @@
 import { MessageThreadFull } from "@/components/tambo/message-thread-full";
 import { components, tools } from "@/lib/tambo/tambo";
 import { TamboProvider } from "@tambo-ai/react";
+import "./tambo-styles.css";
 
 export default function TamboPage() {
   return (
