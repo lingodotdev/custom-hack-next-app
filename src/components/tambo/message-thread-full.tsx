@@ -32,7 +32,7 @@ import {
 import { useMergedRef } from "@/lib/tambo/thread-hooks";
 import type { Suggestion } from "@tambo-ai/react";
 import type { VariantProps } from "class-variance-authority";
-import * as React from "react";
+import { forwardRef } from "react";
 
 /**
  * Props for the MessageThreadFull component
@@ -53,7 +53,7 @@ export interface MessageThreadFullProps
 /**
  * A full-screen chat thread component with message history, input, and suggestions
  */
-export const MessageThreadFull = React.forwardRef<
+export const MessageThreadFull = forwardRef<
   HTMLDivElement,
   MessageThreadFullProps
 >(({ className, contextKey, variant, ...props }, ref) => {
