@@ -76,7 +76,7 @@ const useMessageInputContext = () => {
   const context = React.useContext(MessageInputContext);
   if (!context) {
     throw new Error(
-      "MessageInput sub-components must be used within a MessageInput",
+      "MessageInput sub-components must be used within a MessageInput"
     );
   }
   return context;
@@ -146,11 +146,11 @@ const MessageInput = React.forwardRef<HTMLFormElement, MessageInputProps>(
           setSubmitError(
             error instanceof Error
               ? error.message
-              : "Failed to send message. Please try again.",
+              : "Failed to send message. Please try again."
           );
         }
       },
-      [value, submit, contextKey, setValue, setDisplayValue, setSubmitError],
+      [value, submit, contextKey, setValue, setDisplayValue, setSubmitError]
     );
 
     const contextValue = React.useMemo(
@@ -178,7 +178,7 @@ const MessageInput = React.forwardRef<HTMLFormElement, MessageInputProps>(
         error,
         contextKey,
         submitError,
-      ],
+      ]
     );
     return (
       <MessageInputContext.Provider
@@ -197,7 +197,7 @@ const MessageInput = React.forwardRef<HTMLFormElement, MessageInputProps>(
         </form>
       </MessageInputContext.Provider>
     );
-  },
+  }
 );
 MessageInput.displayName = "MessageInput";
 
@@ -224,7 +224,7 @@ export interface MessageInputTextareaProps
  */
 const MessageInputTextarea = ({
   className,
-  placeholder = "What do you want to do?",
+  placeholder = "Let's scrape a website",
   ...props
 }: MessageInputTextareaProps) => {
   const { value, setValue, textareaRef, handleSubmit } =
@@ -253,7 +253,7 @@ const MessageInputTextarea = ({
       onKeyDown={handleKeyDown}
       className={cn(
         "flex-1 p-3 rounded-t-lg bg-background text-foreground resize-none text-sm min-h-[82px] max-h-[40vh] focus:outline-none placeholder:text-muted-foreground/50",
-        className,
+        className
       )}
       disabled={isPending}
       placeholder={placeholder}
@@ -304,7 +304,7 @@ const MessageInputSubmitButton = React.forwardRef<
 
   const buttonClasses = cn(
     "w-10 h-10 bg-black/80 text-white rounded-lg hover:bg-black/70 disabled:opacity-50 flex items-center justify-center cursor-pointer",
-    className,
+    className
   );
 
   return (

@@ -12,7 +12,7 @@ export default function TamboPage() {
         components={components}
         tools={tools}
       >
-        <div className="p-4 tambo-theme">
+        <div className="p-4 w-full tambo-theme">
           <MessageThreadFull />
         </div>
       </TamboProvider>

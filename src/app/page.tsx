@@ -1,6 +1,7 @@
 import Firecrawl from "@/components/firecrawl";
 import { AuroraText } from "@/components/magicui/aurora-text";
 import ResendEmailForm from "@/components/resend/form";
+import Tambo from "@/components/tambo";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       </h1>
       <ResendEmailForm />
       <Firecrawl />
+      <Tambo />
     </div>
   );
 }
