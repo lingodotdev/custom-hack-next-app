@@ -52,6 +52,10 @@ To localize templates tun `npx lingo.dev@latest run`.
 
 ### Autumn
 
+1. Sign up via this link to auto create sample free and pro tiers: https://app.useautumn.com/sign-in?token=2zMnk448D3OFlXKsL9SBdj3609w
+2. Create an API key here: https://app.useautumn.com/dev
+3. Add it to your .env as AUTUMN_SECRET_KEY
+
 ### Tambo
 
 Add React components to your AI assistant, copilot, or agent.
