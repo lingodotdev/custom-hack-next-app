@@ -49,7 +49,71 @@
           "context": "",
           "skip": false,
           "overrides": {},
-          "content": "Welcome to <element:AuroraText>CustomHack</element:AuroraText>"
+          "content": "Welcome to <element:AuroraText>CustomHack train</element:AuroraText>"
+        },
+        "9/declaration/body/2/argument/1": {
+          "type": "element",
+          "hash": "50624842760e75aa1a7e0a57a5d1ea91",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Welcome to <element:AuroraText>CustomHack train</element:AuroraText>"
+        }
+      }
+    },
+    "app/tambo/page.tsx": {
+      "scopes": {
+        "6/body/0/argument": {
+          "type": "element",
+          "hash": "9af3257d8b057be341dd529e999c3938",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "← Back to homepage"
+        }
+      }
+    },
+    "components/autumn/index.tsx": {
+      "scopes": {
+        "4/declaration/body/3/argument/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "127c4f56f49cfcd6b51aad34b9c88557",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Hi chatbot!"
+        },
+        "4/declaration/body/3/argument/1/3": {
+          "type": "element",
+          "hash": "57b5da7d778fd6678dc3642e0120e32f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send Message"
+        },
+        "4/declaration/body/3/argument/1/5/1": {
+          "type": "element",
+          "hash": "3b25138bc167e54a71a5ceb2ae1fbf11",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<expression/> / <expression/>"
+        },
+        "4/declaration/body/3/argument/1/7": {
+          "type": "element",
+          "hash": "bea4c19a787e2e61af798a251bf06894",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Upgrade"
+        },
+        "4/declaration/body/3/argument/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "bd05e6ab663675ab8d94c58c03456ccd",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Autumn"
         }
       }
     },
@@ -330,6 +394,214 @@
           "skip": true,
           "overrides": {},
           "content": "Tambo"
+        }
+      }
+    },
+    "components/tambo/markdownComponents.tsx": {
+      "scopes": {
+        "8/0/init/body/2/argument/3-title": {
+          "type": "attribute",
+          "hash": "704c13d9bc01caad29a1cf3179baa111",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Copy code"
+        }
+      }
+    },
+    "components/tambo/message-input.tsx": {
+      "scopes": {
+        "13/0/init/body/5/argument-aria-label": {
+          "type": "attribute",
+          "hash": "ff8160ca793b4337a2ae3b55ed91b165",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Chat Message Input"
+        }
+      }
+    },
+    "components/tambo/message-suggestions.tsx": {
+      "scopes": {
+        "15/0/init/0/body/1/argument/7/1/expression/alternate/consequent/3": {
+          "type": "element",
+          "hash": "bd20b18e099dcc0a3623c0a01a1a8b83",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Generating suggestions..."
+        },
+        "18/0/init/0/body/4/argument/1/expression/alternate/0/body/1": {
+          "type": "element",
+          "hash": "88c2c168aff12ca70148fcb5f6b4c7b1",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Placeholder"
+        },
+        "18/0/init/0/body/4/argument/1/expression/consequent/0/body/openingElement/1/value/expression": {
+          "type": "element",
+          "hash": "f31601e3feba527374d829919cef81af",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "{modKey}+{altKey}+<expression/>"
+        }
+      }
+    },
+    "components/tambo/message-thread-full.tsx": {
+      "scopes": {
+        "12/declaration/0/init/0/body/4/argument/5/9/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "b57049fc2a99e0dd830b0070994bff08",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask to scrape a website or send an email"
+        }
+      }
+    },
+    "components/tambo/message.tsx": {
+      "scopes": {
+        "21/0/init/0/body/5/argument/1/expression/alternate/1/expression/consequent": {
+          "type": "element",
+          "hash": "baff720fb8b5b98d628017237c7cfd97",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Empty message"
+        },
+        "21/0/init/0/body/5/argument/1/expression/alternate/3/expression/right": {
+          "type": "element",
+          "hash": "3264b6023ca6800a6ba67a9656b5661d",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "cancelled"
+        },
+        "25/0/init/0/body/9/argument/1/3/1": {
+          "type": "element",
+          "hash": "699d9cbbd9304f82c6abf3a64fbead48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "tool: <expression/>"
+        },
+        "25/0/init/0/body/9/argument/1/3/3": {
+          "type": "element",
+          "hash": "fec7307ef65be4cc85e4d7aaa196701e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "parameters:<expression/><function:stringify/>"
+        },
+        "25/0/init/0/body/9/argument/1/3/5/expression/right/1": {
+          "type": "element",
+          "hash": "dc78a30f492a58bf2f3fbec2f2c80222",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "result:"
+        },
+        "25/0/init/0/body/9/argument/1/3/5/expression/right/3/1/expression/consequent": {
+          "type": "element",
+          "hash": "b2ba9ef458d74f34124f7fbc99a3d3d0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Empty response"
+        },
+        "29/0/init/0/body/4/argument/1/expression/right/consequent/1": {
+          "type": "element",
+          "hash": "c2fb0eb54cf4abe70bb6fd1a021fb6a0",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "View component<element:ExternalLink></element:ExternalLink>"
+        },
+        "29/0/init/0/body/4/argument/1/expression/right/consequent/1-aria-label": {
+          "type": "attribute",
+          "hash": "85daeea080f7ade8f4c45e7fdd969d91",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "View component in canvas"
+        }
+      }
+    },
+    "components/tambo/thread-history.tsx": {
+      "scopes": {
+        "11/0/init/0/body/1/argument/1/expression/right": {
+          "type": "element",
+          "hash": "8675bc4842c98ef6dfbe6d6a795bd62e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Tambo Conversations"
+        },
+        "13/0/init/0/body/3/argument-title": {
+          "type": "attribute",
+          "hash": "84e3eb143e4bbecae2115c2b8a53fa38",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New thread"
+        },
+        "13/0/init/0/body/3/argument/3/expression/right": {
+          "type": "element",
+          "hash": "84e3eb143e4bbecae2115c2b8a53fa38",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "New thread"
+        },
+        "15/0/init/0/body/3/argument/1/expression/alternate/3-placeholder": {
+          "type": "attribute",
+          "hash": "fe877a75eac472fc5b188c135c78a558",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search..."
+        },
+        "15/0/init/0/body/3/argument/1/expression/consequent-title": {
+          "type": "attribute",
+          "hash": "71053d014608c7b0e33b705adfdca896",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Search threads"
+        },
+        "17/0/init/0/body/13/alternate/consequent/0/expression/right": {
+          "type": "element",
+          "hash": "395d718df3af6729b8a49470906a929f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Error loading threads"
+        },
+        "17/0/init/0/body/13/consequent/0/expression/right": {
+          "type": "element",
+          "hash": "a4be30f2c934f0135e76077f397d4b8e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading threads..."
+        },
+        "19/0/init/body/0/argument/3/1/1": {
+          "type": "element",
+          "hash": "5536257c315f8251caeeb23755aeab86",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Pencil></element:Pencil> Rename"
+        },
+        "19/0/init/body/0/argument/3/1/3": {
+          "type": "element",
+          "hash": "e4ce714b58ee52dcf102252cb171368c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Sparkles></element:Sparkles> Generate Name"
         }
       }
     }
