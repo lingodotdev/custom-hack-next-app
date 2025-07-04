@@ -70,6 +70,22 @@ Add React components to your AI assistant, copilot, or agent.
 
 Set your Tambo API key as `NEXT_PUBLIC_TAMBO_API_KEY` env variable. [The `NEXT_PUBLIC_` prefix makes it available client-side in browser.](https://nextjs.org/docs/app/guides/environment-variables#bundling-environment-variables-for-the-browser)
 
+**Use Tambo with BetterAuth** (`src/app/tambo/auth/page.tsx`):
+
+```typescript
+// Check session and get Google ID token
+const { data: session } = useSession();
+const token = await getAccessToken({ providerId: "google" });
+
+// Pass idToken to Tambo as userToken
+<TamboProvider
+  apiKey={process.env.NEXT_PUBLIC_TAMBO_API_KEY!}
+  userToken={token.data?.idToken}
+>
+  <MessageThreadFull />
+</TamboProvider>
+```
+
 ### BetterAuth
 
 The most comprehensive authentication framework for TypeScript.
