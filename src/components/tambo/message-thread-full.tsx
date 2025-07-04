@@ -91,42 +91,46 @@ export const MessageThreadFull = forwardRef<
   ];
 
   return (
-    <>
+    <div className="flex w-full h-full">
       {/* Thread History Sidebar - rendered first if history is on the left */}
       {historyPosition === "left" && threadHistorySidebar}
 
       <ThreadContainer ref={mergedRef} className={className} {...props}>
-        <ScrollableMessageContainer className="p-4">
+        {/* Scrollable content area - takes remaining space */}
+        <ScrollableMessageContainer className="flex-1 p-4">
           <ThreadContent variant={variant}>
             <ThreadContentMessages />
           </ThreadContent>
         </ScrollableMessageContainer>
 
-        {/* Message suggestions status */}
-        <MessageSuggestions>
-          <MessageSuggestionsStatus />
-        </MessageSuggestions>
+        {/* Fixed-height sections at bottom */}
+        <div className="flex-shrink-0">
+          {/* Message suggestions status */}
+          <MessageSuggestions>
+            <MessageSuggestionsStatus />
+          </MessageSuggestions>
 
-        {/* Message input */}
-        <div className="p-4">
-          <MessageInput contextKey={contextKey}>
-            <MessageInputTextarea placeholder="Ask to scrape a website or send an email" />
-            <MessageInputToolbar>
-              <MessageInputSubmitButton />
-            </MessageInputToolbar>
-            <MessageInputError />
-          </MessageInput>
+          {/* Message input */}
+          <div className="p-4">
+            <MessageInput contextKey={contextKey}>
+              <MessageInputTextarea placeholder="Ask to scrape a website or send an email" />
+              <MessageInputToolbar>
+                <MessageInputSubmitButton />
+              </MessageInputToolbar>
+              <MessageInputError />
+            </MessageInput>
+          </div>
+
+          {/* Message suggestions */}
+          <MessageSuggestions initialSuggestions={defaultSuggestions}>
+            <MessageSuggestionsList />
+          </MessageSuggestions>
         </div>
-
-        {/* Message suggestions */}
-        <MessageSuggestions initialSuggestions={defaultSuggestions}>
-          <MessageSuggestionsList />
-        </MessageSuggestions>
       </ThreadContainer>
 
       {/* Thread History Sidebar - rendered last if history is on the right */}
       {historyPosition === "right" && threadHistorySidebar}
-    </>
+    </div>
   );
 });
 MessageThreadFull.displayName = "MessageThreadFull";

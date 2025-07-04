@@ -14,6 +14,28 @@ export default {
         },
       },
     },
+    "app/tambo/page.tsx": {
+      entries: {
+        "7/declaration/body/3/consequent/0/argument/1/3/1": {
+          content: {
+            en: "Please log in to access Tambo AI chat.",
+          },
+          hash: "8854cc54e7ac05fc95b42b112959c9ac",
+        },
+        "7/declaration/body/3/consequent/0/argument/1/3/3": {
+          content: {
+            en: "Go to Login",
+          },
+          hash: "ef487e2dec2eded2ec2e59b2b4c73e27",
+        },
+        "8/body/0/argument": {
+          content: {
+            en: "← Back to homepage",
+          },
+          hash: "9af3257d8b057be341dd529e999c3938",
+        },
+      },
+    },
     "components/autumn/index.tsx": {
       entries: {
         "3/declaration/body/5/argument/1/1-placeholder": {
@@ -273,6 +295,173 @@ export default {
             fr: "Construire des interfaces conversationnelles<element:Link>Chat</element:Link>",
           },
           hash: "d060889398bdfc6821a8aa5fa5e5840b",
+        },
+      },
+    },
+    "components/tambo/markdownComponents.tsx": {
+      entries: {
+        "8/0/init/body/2/argument/3-title": {
+          content: {
+            en: "Copy code",
+          },
+          hash: "704c13d9bc01caad29a1cf3179baa111",
+        },
+      },
+    },
+    "components/tambo/message-input.tsx": {
+      entries: {
+        "13/0/init/body/5/argument-aria-label": {
+          content: {
+            en: "Chat Message Input",
+          },
+          hash: "ff8160ca793b4337a2ae3b55ed91b165",
+        },
+      },
+    },
+    "components/tambo/message-suggestions.tsx": {
+      entries: {
+        "15/0/init/0/body/1/argument/7/1/expression/alternate/consequent/3": {
+          content: {
+            en: "Generating suggestions...",
+          },
+          hash: "bd20b18e099dcc0a3623c0a01a1a8b83",
+        },
+        "18/0/init/0/body/4/argument/1/expression/alternate/0/body/1": {
+          content: {
+            en: "Placeholder",
+          },
+          hash: "88c2c168aff12ca70148fcb5f6b4c7b1",
+        },
+        "18/0/init/0/body/4/argument/1/expression/consequent/0/body/openingElement/1/value/expression":
+          {
+            content: {
+              en: "{modKey}+{altKey}+<expression/>",
+            },
+            hash: "f31601e3feba527374d829919cef81af",
+          },
+      },
+    },
+    "components/tambo/message-thread-full.tsx": {
+      entries: {
+        "12/declaration/0/init/0/body/4/argument/5/9/1/1-placeholder": {
+          content: {
+            en: "Ask to scrape a website or send an email",
+          },
+          hash: "b57049fc2a99e0dd830b0070994bff08",
+        },
+      },
+    },
+    "components/tambo/message.tsx": {
+      entries: {
+        "21/0/init/0/body/5/argument/1/expression/alternate/1/expression/consequent":
+          {
+            content: {
+              en: "Empty message",
+            },
+            hash: "baff720fb8b5b98d628017237c7cfd97",
+          },
+        "21/0/init/0/body/5/argument/1/expression/alternate/3/expression/right":
+          {
+            content: {
+              en: "cancelled",
+            },
+            hash: "3264b6023ca6800a6ba67a9656b5661d",
+          },
+        "25/0/init/0/body/9/argument/1/3/1": {
+          content: {
+            en: "tool: <expression/>",
+          },
+          hash: "699d9cbbd9304f82c6abf3a64fbead48",
+        },
+        "25/0/init/0/body/9/argument/1/3/3": {
+          content: {
+            en: "parameters:<expression/><function:stringify/>",
+          },
+          hash: "fec7307ef65be4cc85e4d7aaa196701e",
+        },
+        "25/0/init/0/body/9/argument/1/3/5/expression/right/1": {
+          content: {
+            en: "result:",
+          },
+          hash: "dc78a30f492a58bf2f3fbec2f2c80222",
+        },
+        "25/0/init/0/body/9/argument/1/3/5/expression/right/3/1/expression/consequent":
+          {
+            content: {
+              en: "Empty response",
+            },
+            hash: "b2ba9ef458d74f34124f7fbc99a3d3d0",
+          },
+        "29/0/init/0/body/4/argument/1/expression/right/consequent/1": {
+          content: {
+            en: "View component<element:ExternalLink></element:ExternalLink>",
+          },
+          hash: "c2fb0eb54cf4abe70bb6fd1a021fb6a0",
+        },
+        "29/0/init/0/body/4/argument/1/expression/right/consequent/1-aria-label":
+          {
+            content: {
+              en: "View component in canvas",
+            },
+            hash: "85daeea080f7ade8f4c45e7fdd969d91",
+          },
+      },
+    },
+    "components/tambo/thread-history.tsx": {
+      entries: {
+        "11/0/init/0/body/1/argument/1/expression/right": {
+          content: {
+            en: "Tambo Conversations",
+          },
+          hash: "8675bc4842c98ef6dfbe6d6a795bd62e",
+        },
+        "13/0/init/0/body/3/argument-title": {
+          content: {
+            en: "New thread",
+          },
+          hash: "84e3eb143e4bbecae2115c2b8a53fa38",
+        },
+        "13/0/init/0/body/3/argument/3/expression/right": {
+          content: {
+            en: "New thread",
+          },
+          hash: "84e3eb143e4bbecae2115c2b8a53fa38",
+        },
+        "15/0/init/0/body/3/argument/1/expression/alternate/3-placeholder": {
+          content: {
+            en: "Search...",
+          },
+          hash: "fe877a75eac472fc5b188c135c78a558",
+        },
+        "15/0/init/0/body/3/argument/1/expression/consequent-title": {
+          content: {
+            en: "Search threads",
+          },
+          hash: "71053d014608c7b0e33b705adfdca896",
+        },
+        "17/0/init/0/body/13/alternate/consequent/0/expression/right": {
+          content: {
+            en: "Error loading threads",
+          },
+          hash: "395d718df3af6729b8a49470906a929f",
+        },
+        "17/0/init/0/body/13/consequent/0/expression/right": {
+          content: {
+            en: "Loading threads...",
+          },
+          hash: "a4be30f2c934f0135e76077f397d4b8e",
+        },
+        "19/0/init/body/0/argument/3/1/1": {
+          content: {
+            en: "<element:Pencil></element:Pencil> Rename",
+          },
+          hash: "5536257c315f8251caeeb23755aeab86",
+        },
+        "19/0/init/body/0/argument/3/1/3": {
+          content: {
+            en: "<element:Sparkles></element:Sparkles> Generate Name",
+          },
+          hash: "e4ce714b58ee52dcf102252cb171368c",
         },
       },
     },

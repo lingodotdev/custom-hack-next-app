@@ -18,8 +18,8 @@ importers:
         specifier: ^2.1.15
         version: 2.1.15(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@tambo-ai/react':
-        specifier: ^0.36.0
-        version: 0.36.0(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(encoding@0.1.13)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
+        specifier: ^0.37.1
+        version: 0.37.1(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(encoding@0.1.13)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)
       '@tambo-ai/typescript-sdk':
         specifier: ^0.59.0
         version: 0.59.0(encoding@0.1.13)
@@ -810,6 +810,10 @@ packages:
 
   '@modelcontextprotocol/sdk@1.13.3':
     resolution: {integrity: sha512-bGwA78F/U5G2jrnsdRkPY3IwIwZeWUEfb5o764b79lb0rJmMT76TLwKhdNZOWakOQtedYefwIR4emisEMvInKA==}
+    engines: {node: '>=18'}
+
+  '@modelcontextprotocol/sdk@1.15.0':
+    resolution: {integrity: sha512-67hnl/ROKdb03Vuu0YOr+baKTvf1/5YBHBm9KnZdjdAh8hjt4FRCPD5ucwxGB237sBpzlqQsLy1PFu7z/ekZ9Q==}
     engines: {node: '>=18'}
 
   '@napi-rs/wasm-runtime@0.2.11':
@@ -2014,8 +2018,8 @@ packages:
   '@tailwindcss/postcss@4.1.11':
     resolution: {integrity: sha512-q/EAIIpF6WpLhKEuQSEVMZNMIY8KhWoAemZ9eylNAih9jxMGAYPPWBn3I9QL/2jZ+e7OEz/tZkX5HwbBR4HohA==}
 
-  '@tambo-ai/react@0.36.0':
-    resolution: {integrity: sha512-qu7yEX9w7fjLPSgp0OmN8p3vM81EAJTdt2DkwJ1erGlwwYVw//AD4X8JLiPRqUb04ySeQ0MIjTVPdIDF6pa71w==}
+  '@tambo-ai/react@0.37.1':
+    resolution: {integrity: sha512-aolS+h5coyi0rEOrGitf1nYBqyE21el9Q3h60/2QZbQZVRNh4AVnok4rWVkDM74Uz+UL3vF5Dkb9jk5o/TTmxg==}
     engines: {node: '>=22', npm: '>=10'}
     peerDependencies:
       '@types/react': ^18.0.0 || ^19.0.0
@@ -2025,6 +2029,9 @@ packages:
 
   '@tambo-ai/typescript-sdk@0.59.0':
     resolution: {integrity: sha512-HQzHkkqZ3PFf6BgzAokAfrfsZJCV5PWSBV6zyMcQWyx9PMsUyiyB3Cvzn7597+IdrOx7Hgn/yFjsDWL/JjU21g==}
+
+  '@tambo-ai/typescript-sdk@0.61.0':
+    resolution: {integrity: sha512-8ERYuRSiPHoef8UYRvj3PlYZLuqwQ+YgQjGWCEJcIhM9CBsMsJ1SLHusOFsFWxT5ZysWkBN8gFX8D+NvVsECNQ==}
 
   '@tanstack/query-core@5.81.5':
     resolution: {integrity: sha512-ZJOgCy/z2qpZXWaj/oxvodDx07XcQa9BF92c0oINjHkoqUPsmm3uG08HpTaviviZ/N9eP1f9CM7mKSEkIo7O1Q==}
@@ -6278,6 +6285,23 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
+  '@modelcontextprotocol/sdk@1.15.0':
+    dependencies:
+      ajv: 6.12.6
+      content-type: 1.0.5
+      cors: 2.8.5
+      cross-spawn: 7.0.6
+      eventsource: 3.0.7
+      eventsource-parser: 3.0.3
+      express: 5.1.0
+      express-rate-limit: 7.5.1(express@5.1.0)
+      pkce-challenge: 5.0.0
+      raw-body: 3.0.0
+      zod: 3.25.71
+      zod-to-json-schema: 3.24.6(zod@3.25.71)
+    transitivePeerDependencies:
+      - supports-color
+
   '@napi-rs/wasm-runtime@0.2.11':
     dependencies:
       '@emnapi/core': 1.4.3
@@ -7502,10 +7526,10 @@ snapshots:
       postcss: 8.5.6
       tailwindcss: 4.1.11
 
-  '@tambo-ai/react@0.36.0(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(encoding@0.1.13)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
+  '@tambo-ai/react@0.37.1(@types/react-dom@19.1.6(@types/react@19.1.8))(@types/react@19.1.8)(encoding@0.1.13)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(typescript@5.8.3)':
     dependencies:
-      '@modelcontextprotocol/sdk': 1.13.3
-      '@tambo-ai/typescript-sdk': 0.59.0(encoding@0.1.13)
+      '@modelcontextprotocol/sdk': 1.15.0
+      '@tambo-ai/typescript-sdk': 0.61.0(encoding@0.1.13)
       '@tanstack/react-query': 5.81.5(react@19.1.0)
       '@types/react': 19.1.8
       '@types/react-dom': 19.1.6(@types/react@19.1.8)
@@ -7523,6 +7547,16 @@ snapshots:
       - typescript
 
   '@tambo-ai/typescript-sdk@0.59.0(encoding@0.1.13)':
+    dependencies:
+      abort-controller: 3.0.0
+      agentkeepalive: 4.6.0
+      form-data-encoder: 1.7.2
+      formdata-node: 4.4.1
+      node-fetch: 2.7.0(encoding@0.1.13)
+    transitivePeerDependencies:
+      - encoding
+
+  '@tambo-ai/typescript-sdk@0.61.0(encoding@0.1.13)':
     dependencies:
       abort-controller: 3.0.0
       agentkeepalive: 4.6.0
