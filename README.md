@@ -32,21 +32,19 @@ AI localization for teams who ship fast. Translate apps, websites, and entire da
 
 - https://lingo.dev
 
+Set your Lingo.dev API key as `LINGODOTDEV_API_KEY` (or login via `npx lingo.dev@latest login`) to use Compiler and CLI.
+
 #### Compiler
 
 Next.js application is localized using Lingo.dev Compiler.
 
 - https://lingo.dev/en/compiler/frameworks/nextjs
 
-Compiler is setup to use [Groq](https://groq.com/). Set your Groq API key as `GROQ_API_KEY` env variable.
-
 #### CLI
 
 Resend email templates are localized via Lingo.dev CLI.
 
 - https://lingo.dev/en/cli
-
-Set your Lingo.dev API key as `LINGODOTDEV_API_KEY` (or login via `npx lingo.dev@latest login`).
 
 To localize templates tun `npx lingo.dev@latest run`.
 

@@ -9,9 +9,5 @@ const nextConfig: NextConfig = {
 export default lingoCompiler.next({
   sourceLocale: "en",
   targetLocales: ["es", "fr", "de"],
-  models: {
-    // translate to all languages using mistral-saba-24b from Groq
-    // you can find other models at https://console.groq.com/docs/models
-    "*:*": "groq:mistral-saba-24b",
-  },
+  models: "lingo.dev",
 })(nextConfig);
