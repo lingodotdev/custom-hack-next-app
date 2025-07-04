@@ -1,5 +1,45 @@
 {
   "files": {
+    "app/auth/login/page.tsx": {
+      "scopes": {
+        "6/declaration/body/4/argument-title": {
+          "type": "attribute",
+          "hash": "f4f219abeb5a465ecb1c7efaf50246de",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Login"
+        },
+        "6/declaration/body/4/argument/1": {
+          "type": "element",
+          "hash": "fd806cbdb153c01442b2a711ba22f35c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "If you don't have an account, <element:Link>sign up</element:Link> . Otherwise, login here 👇"
+        }
+      }
+    },
+    "app/auth/signup/page.tsx": {
+      "scopes": {
+        "6/declaration/body/4/argument-title": {
+          "type": "attribute",
+          "hash": "a6a0b995463f62ce6a12e37f1d05a9bd",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sign up"
+        },
+        "6/declaration/body/4/argument/1": {
+          "type": "element",
+          "hash": "4f2bd96b5772f40ced7979910bcff055",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "If you already have an account, <element:Link>login</element:Link> . Otherwise, sign up here 👇"
+        }
+      }
+    },
     "app/page.tsx": {
       "scopes": {
         "9/declaration/body/2/argument/1": {
@@ -9,6 +49,26 @@
           "skip": false,
           "overrides": {},
           "content": "Welcome to <element:AuroraText>CustomHack train</element:AuroraText>"
+        }
+      }
+    },
+    "app/tambo/auth/page.tsx": {
+      "scopes": {
+        "7/declaration/body/3/consequent/0/argument/1/1/1": {
+          "type": "element",
+          "hash": "fd4c466567350b321a7b253bee5f8812",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "This chat is using tambo_ai's authentication with better-auth. To use this chat setup better auth and then come back here."
+        },
+        "7/declaration/body/3/consequent/0/argument/1/1/3": {
+          "type": "element",
+          "hash": "ef487e2dec2eded2ec2e59b2b4c73e27",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Go to Login"
         }
       }
     },
@@ -176,6 +236,50 @@
         }
       }
     },
+    "components/better-auth/auth-form.tsx": {
+      "scopes": {
+        "3/declaration/body/3/argument/1-placeholder": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "3/declaration/body/3/argument/3-placeholder": {
+          "type": "attribute",
+          "hash": "223a61cf906ab9c40d22612c588dff48",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Password"
+        },
+        "3/declaration/body/3/argument/5/1/expression/alternate": {
+          "type": "element",
+          "hash": "3cfba90b4600131e82fc4260c568d044",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Continue"
+        },
+        "3/declaration/body/3/argument/5/1/expression/consequent": {
+          "type": "element",
+          "hash": "82b4ea7ed1439094d7c4be13aaba9a66",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading..."
+        },
+        "3/declaration/body/3/argument/7": {
+          "type": "element",
+          "hash": "78f90d3ce8a8cbadf84be5a011809dc6",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "or <element:Link>go back to homepage</element:Link>"
+        }
+      }
+    },
     "components/better-auth/index.tsx": {
       "scopes": {
         "4/declaration/body/1/argument/openingElement/0/value/expression": {
@@ -334,6 +438,30 @@
           "overrides": {},
           "content": "Build conversational interfaces<element:Link>Chat</element:Link>"
         },
+        "2/declaration/body/0/argument/1/1": {
+          "type": "element",
+          "hash": "3a52e237cd3febd996d0c0b5d6c1d7ed",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Build conversational interfaces with Tambo AI"
+        },
+        "2/declaration/body/0/argument/1/3/3": {
+          "type": "element",
+          "hash": "82a3b3887cc7fe92161ab8f7f672456c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Chat w/ Tambo"
+        },
+        "2/declaration/body/0/argument/1/3/7": {
+          "type": "element",
+          "hash": "52511a59539b59c4e852e389f449ff09",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Chat w/ Better Auth"
+        },
         "2/declaration/body/0/argument/openingElement/0/value/expression": {
           "type": "element",
           "hash": "00fb262df2c95969a58c1e17b4d6d69d",
@@ -398,6 +526,14 @@
     },
     "components/tambo/message-thread-full.tsx": {
       "scopes": {
+        "12/declaration/0/init/0/body/4/argument/5/7/7/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "b57049fc2a99e0dd830b0070994bff08",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask to scrape a website or send an email"
+        },
         "12/declaration/0/init/0/body/4/argument/5/9/1/1-placeholder": {
           "type": "attribute",
           "hash": "b57049fc2a99e0dd830b0070994bff08",
