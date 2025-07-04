@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 **tl;dr** [click here to deploy to Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flingodotdev%2Fcustom-hack-next-app)
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/lingodotdev/custom-hack-next-app)
+
 ## Getting Started
 
 First, install the dependencies via a package manager (we prefer [pnpm](https://pnpm.io/)):
