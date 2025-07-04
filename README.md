@@ -2,7 +2,7 @@
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). It is a boilerplate for [CustomHack](https://lu.ma/rnvz7h05).
 
-**tl;dr** [click here to deploy to Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flingodotdev%2Fcustom-hack-next-app)
+**tl;dr** [click here to deploy to Vercel](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Flingodotdev%2Fcustom-hack-next-app) or [open in StackBlitz](https://stackblitz.com/github/lingodotdev/custom-hack-next-app).
 
 ## Getting Started
 
