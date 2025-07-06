@@ -182,6 +182,22 @@
           "overrides": {},
           "content": "Usage: {balance} / {included_usage}"
         },
+        "3/declaration/body/6/argument/1/5/1/expression/alternate": {
+          "type": "element",
+          "hash": "d865bdf0e56f516f073a0930a68685c4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No messages left."
+        },
+        "3/declaration/body/6/argument/1/5/1/expression/consequent": {
+          "type": "element",
+          "hash": "18aac7f9dff1ae8a52549292ebf13136",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Usage: {balance} / {included_usage}"
+        },
         "3/declaration/body/6/argument/3/expression/right/1": {
           "type": "element",
           "hash": "9dcd562dd86729836ee591b4e9b16944",
@@ -199,6 +215,102 @@
           "content": "Upgrade"
         },
         "3/declaration/body/6/argument/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "bd05e6ab663675ab8d94c58c03456ccd",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Autumn"
+        },
+        "3/declaration/body/7/argument/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "127c4f56f49cfcd6b51aad34b9c88557",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Hi chatbot!"
+        },
+        "3/declaration/body/7/argument/1/3": {
+          "type": "element",
+          "hash": "57b5da7d778fd6678dc3642e0120e32f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send Message"
+        },
+        "3/declaration/body/7/argument/1/5/1/expression/alternate": {
+          "type": "element",
+          "hash": "d865bdf0e56f516f073a0930a68685c4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No messages left."
+        },
+        "3/declaration/body/7/argument/1/5/1/expression/consequent": {
+          "type": "element",
+          "hash": "18aac7f9dff1ae8a52549292ebf13136",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Usage: {balance} / {included_usage}"
+        },
+        "3/declaration/body/7/argument/3/expression/right/1": {
+          "type": "element",
+          "hash": "9dcd562dd86729836ee591b4e9b16944",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Out of messages, please upgrade!"
+        },
+        "3/declaration/body/7/argument/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "bd05e6ab663675ab8d94c58c03456ccd",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Autumn"
+        },
+        "3/declaration/body/8/argument/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "127c4f56f49cfcd6b51aad34b9c88557",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Hi chatbot!"
+        },
+        "3/declaration/body/8/argument/1/3": {
+          "type": "element",
+          "hash": "57b5da7d778fd6678dc3642e0120e32f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send Message"
+        },
+        "3/declaration/body/8/argument/1/5/1/expression/alternate": {
+          "type": "element",
+          "hash": "d865bdf0e56f516f073a0930a68685c4",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "No messages left."
+        },
+        "3/declaration/body/8/argument/1/5/1/expression/consequent": {
+          "type": "element",
+          "hash": "18aac7f9dff1ae8a52549292ebf13136",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Usage: {balance} / {included_usage}"
+        },
+        "3/declaration/body/8/argument/3/expression/right/1/1": {
+          "type": "element",
+          "hash": "9dcd562dd86729836ee591b4e9b16944",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Out of messages, please upgrade!"
+        },
+        "3/declaration/body/8/argument/openingElement/0/value/expression": {
           "type": "element",
           "hash": "bd05e6ab663675ab8d94c58c03456ccd",
           "context": "",
@@ -321,6 +433,22 @@
           "skip": true,
           "overrides": {},
           "content": "Lingo.dev Compiler"
+        },
+        "2/declaration/body/2/argument/5": {
+          "type": "element",
+          "hash": "4d4c7a4e3e366b756fc75d9067cb9f5e",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Lingo.dev Compiler"
+        },
+        "3/declaration/body/2/argument/3/expression/right/3": {
+          "type": "element",
+          "hash": "af7eaea7a39654a55635ac4ee3e8ac55",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Lingo.dev Compiler"
         }
       }
     },
@@ -343,6 +471,30 @@
           "content": "Scrape"
         },
         "2/declaration/body/3/argument/3/1/expression/consequent": {
+          "type": "element",
+          "hash": "845a06785985415fdd660983879f0356",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Scraping..."
+        },
+        "2/declaration/body/4/argument/1-placeholder": {
+          "type": "attribute",
+          "hash": "ca97457614226960d41dd18c3c29c86b",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "URL"
+        },
+        "2/declaration/body/4/argument/3/1/expression/alternate": {
+          "type": "element",
+          "hash": "a8412c6899bb1944e334e92e9a97f020",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Scrape"
+        },
+        "2/declaration/body/4/argument/3/1/expression/consequent": {
           "type": "element",
           "hash": "845a06785985415fdd660983879f0356",
           "context": "",
@@ -386,6 +538,38 @@
     },
     "components/resend/form.tsx": {
       "scopes": {
+        "1/declaration/body/6/argument/1-placeholder": {
+          "type": "attribute",
+          "hash": "9368b5a047572b6051f334af5aa76819",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Name"
+        },
+        "1/declaration/body/6/argument/3-placeholder": {
+          "type": "attribute",
+          "hash": "e7f34943a0c2fb849db1839ff6ef5cb5",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email"
+        },
+        "1/declaration/body/6/argument/5/1/expression/alternate": {
+          "type": "element",
+          "hash": "0ef83c0bb40de25921a9ee7fa05babec",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Send email"
+        },
+        "1/declaration/body/6/argument/5/1/expression/consequent": {
+          "type": "element",
+          "hash": "313baf79716ca9d57de864eaac4a602a",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Sending..."
+        },
         "2/declaration/body/6/argument/1/1-placeholder": {
           "type": "attribute",
           "hash": "9368b5a047572b6051f334af5aa76819",
@@ -425,6 +609,62 @@
           "skip": true,
           "overrides": {},
           "content": "Resend"
+        }
+      }
+    },
+    "components/resend/index.tsx": {
+      "scopes": {
+        "4/declaration/body/1/argument/openingElement/0/value/expression": {
+          "type": "element",
+          "hash": "f420d288f862ba079434362ddb2e4e4e",
+          "context": "",
+          "skip": true,
+          "overrides": {},
+          "content": "Resend"
+        }
+      }
+    },
+    "components/resend/result.tsx": {
+      "scopes": {
+        "1/declaration/body/1/argument/1/1": {
+          "type": "element",
+          "hash": "d50842fc4d4c0ac7972c4ce701a9c282",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "← Send another email"
+        },
+        "1/declaration/body/1/argument/3/3/1": {
+          "type": "element",
+          "hash": "bdea9a2106a3d0cedcced851872a1abc",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Name:"
+        },
+        "1/declaration/body/1/argument/3/5/1": {
+          "type": "element",
+          "hash": "f08eeb8e3d27821c749230891b2aee12",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Email:"
+        },
+        "1/declaration/body/1/argument/3/7/expression/right/1/1": {
+          "type": "element",
+          "hash": "3ddcf6b8d7abb33d032d80a9c134cd09",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Error:"
+        },
+        "1/declaration/body/1/argument/3/7/expression/right/3/expression/right/1": {
+          "type": "element",
+          "hash": "b61c9c69bc38458f37b13e4265bc6f53",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<expression/> error details"
         }
       }
     },
@@ -526,6 +766,14 @@
     },
     "components/tambo/message-thread-full.tsx": {
       "scopes": {
+        "11/declaration/0/init/0/body/4/argument/5/7/7/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "b57049fc2a99e0dd830b0070994bff08",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask to scrape a website or send an email"
+        },
         "12/declaration/0/init/0/body/4/argument/5/7/7/1/1-placeholder": {
           "type": "attribute",
           "hash": "b57049fc2a99e0dd830b0070994bff08",
@@ -535,6 +783,22 @@
           "content": "Ask to scrape a website or send an email"
         },
         "12/declaration/0/init/0/body/4/argument/5/9/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "b57049fc2a99e0dd830b0070994bff08",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask to scrape a website or send an email"
+        },
+        "12/declaration/0/init/0/body/5/argument/5/7/7/1/1-placeholder": {
+          "type": "attribute",
+          "hash": "b57049fc2a99e0dd830b0070994bff08",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Ask to scrape a website or send an email"
+        },
+        "13/declaration/0/init/0/body/5/argument/5/7/7/1/1-placeholder": {
           "type": "attribute",
           "hash": "b57049fc2a99e0dd830b0070994bff08",
           "context": "",
@@ -670,6 +934,30 @@
           "overrides": {},
           "content": "Loading threads..."
         },
+        "17/0/init/0/body/3/argument/1/1": {
+          "type": "element",
+          "hash": "1e231f4b008d575c987c67c5529b36b9",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "All"
+        },
+        "19/0/init/0/body/13/alternate/consequent/0/expression/right": {
+          "type": "element",
+          "hash": "395d718df3af6729b8a49470906a929f",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Error loading threads"
+        },
+        "19/0/init/0/body/13/consequent/0/expression/right": {
+          "type": "element",
+          "hash": "a4be30f2c934f0135e76077f397d4b8e",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "Loading threads..."
+        },
         "19/0/init/body/0/argument/3/1/1": {
           "type": "element",
           "hash": "5536257c315f8251caeeb23755aeab86",
@@ -679,6 +967,22 @@
           "content": "<element:Pencil></element:Pencil> Rename"
         },
         "19/0/init/body/0/argument/3/1/3": {
+          "type": "element",
+          "hash": "e4ce714b58ee52dcf102252cb171368c",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Sparkles></element:Sparkles> Generate Name"
+        },
+        "21/0/init/body/0/argument/3/1/1": {
+          "type": "element",
+          "hash": "5536257c315f8251caeeb23755aeab86",
+          "context": "",
+          "skip": false,
+          "overrides": {},
+          "content": "<element:Pencil></element:Pencil> Rename"
+        },
+        "21/0/init/body/0/argument/3/1/3": {
           "type": "element",
           "hash": "e4ce714b58ee52dcf102252cb171368c",
           "context": "",

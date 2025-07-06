@@ -1,6 +1,7 @@
+import { stripTamboLanguageContext } from "@/lib/utils";
+import type { TamboThreadMessage } from "@tambo-ai/react";
 import * as React from "react";
 import { useEffect, useState } from "react";
-import type { TamboThreadMessage } from "@tambo-ai/react";
 
 /**
  * Custom hook to merge multiple refs into one callback ref
@@ -21,7 +22,7 @@ export function useMergedRef<T>(...refs: React.Ref<T>[]) {
         }
       }
     },
-    [refs],
+    [refs]
   );
 }
 
@@ -31,7 +32,7 @@ export function useMergedRef<T>(...refs: React.Ref<T>[]) {
  * @returns Object containing hasCanvasSpace and canvasIsOnLeft
  */
 export function useCanvasDetection(
-  elementRef: React.RefObject<HTMLElement | null>,
+  elementRef: React.RefObject<HTMLElement | null>
 ) {
   const [hasCanvasSpace, setHasCanvasSpace] = useState(false);
   const [canvasIsOnLeft, setCanvasIsOnLeft] = useState(false);
@@ -83,7 +84,7 @@ export function hasRightClass(className?: string): boolean {
 export function usePositioning(
   className?: string,
   canvasIsOnLeft = false,
-  hasCanvasSpace = false,
+  hasCanvasSpace = false
 ) {
   const isRightClass = hasRightClass(className);
   const isLeftPanel = !isRightClass;
@@ -104,20 +105,24 @@ export function usePositioning(
 /**
  * Converts message content into a safely renderable format.
  * Primarily joins text blocks from arrays into a single string.
+ * Also strips language context markers from the content.
  * @param content - The message content (string, element, array, etc.)
  * @returns A renderable string or React element.
  */
 export function getSafeContent(
-  content: TamboThreadMessage["content"] | React.ReactNode | undefined | null,
+  content: TamboThreadMessage["content"] | React.ReactNode | undefined | null
 ): string | React.ReactElement {
   if (!content) return "";
-  if (typeof content === "string") return content;
+  if (typeof content === "string") {
+    return stripTamboLanguageContext(content);
+  }
   if (React.isValidElement(content)) return content; // Pass elements through
   if (Array.isArray(content)) {
     // Filter out non-text items and join text
-    return content
+    const joinedText = content
       .map((item) => (item && item.type === "text" ? (item.text ?? "") : ""))
       .join("");
+    return stripTamboLanguageContext(joinedText);
   }
   // Handle potential edge cases or unknown types
   // console.warn("getSafeContent encountered unknown content type:", content);
@@ -130,7 +135,7 @@ export function getSafeContent(
  * @returns True if there is content, false otherwise.
  */
 export function checkHasContent(
-  content: TamboThreadMessage["content"] | React.ReactNode | undefined | null,
+  content: TamboThreadMessage["content"] | React.ReactNode | undefined | null
 ): boolean {
   if (!content) return false;
   if (typeof content === "string") return content.trim().length > 0;
@@ -141,7 +146,7 @@ export function checkHasContent(
         item &&
         item.type === "text" &&
         typeof item.text === "string" &&
-        item.text.trim().length > 0,
+        item.text.trim().length > 0
     );
   }
   return false; // Default for unknown types

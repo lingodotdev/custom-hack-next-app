@@ -1,15 +1,21 @@
 "use client";
 
-import { useState } from "react";
 import type { ScrapeResponse } from "@mendable/firecrawl-js";
+import { useEffect, useState } from "react";
 
 export default function FirecrawlForm({
   onScrape,
+  defaultUrl = "",
 }: {
   onScrape: (data: ScrapeResponse) => void;
+  defaultUrl?: string;
 }) {
   const [isLoading, setIsLoading] = useState(false);
-  const [url, setUrl] = useState("https://lingo.dev");
+  const [url, setUrl] = useState(defaultUrl);
+
+  useEffect(() => {
+    setUrl(defaultUrl);
+  }, [defaultUrl]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

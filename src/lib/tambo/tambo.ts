@@ -8,8 +8,8 @@
  * Read more about Tambo at https://tambo.co/docs
  */
 
-import Firecrawl from "@/components/firecrawl";
-import ResendEmailForm from "@/components/resend/form";
+import FirecrawlForm from "@/components/firecrawl/form";
+import Resend from "@/components/resend";
 import type { TamboComponent } from "@tambo-ai/react";
 import { TamboTool } from "@tambo-ai/react";
 import { z } from "zod";
@@ -47,14 +47,19 @@ export const components: TamboComponent[] = [
     name: "firecrawl",
     description:
       "A form to enter a url and scrape a website using firecrawl and return the results",
-    component: Firecrawl,
-    propsSchema: z.object({}),
+    component: FirecrawlForm,
+    propsSchema: z.object({
+      defaultUrl: z.string(),
+    }),
   },
   {
     name: "resend",
     description: "A form to send an email using Resend",
-    component: ResendEmailForm,
-    propsSchema: z.object({}),
+    component: Resend,
+    propsSchema: z.object({
+      defaultName: z.string().optional(),
+      defaultEmail: z.string().optional(),
+    }),
   },
   // Add more components here
 ];

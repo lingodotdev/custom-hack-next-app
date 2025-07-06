@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn, extractTamboLanguage, getAvailableLanguages } from "@/lib/utils";
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import {
   type TamboThread,
@@ -31,6 +31,9 @@ interface ThreadHistoryContextValue {
   startNewThread: () => void;
   searchQuery: string;
   setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
+  languageFilter: string | null;
+  setLanguageFilter: React.Dispatch<React.SetStateAction<string | null>>;
+  availableLanguages: string[];
   isCollapsed: boolean;
   setIsCollapsed: React.Dispatch<React.SetStateAction<boolean>>;
   onThreadChange?: () => void;
@@ -47,7 +50,7 @@ const useThreadHistoryContext = () => {
   const context = React.useContext(ThreadHistoryContext);
   if (!context) {
     throw new Error(
-      "ThreadHistory components must be used within ThreadHistory",
+      "ThreadHistory components must be used within ThreadHistory"
     );
   }
   return context;
@@ -75,9 +78,12 @@ const ThreadHistory = React.forwardRef<HTMLDivElement, ThreadHistoryProps>(
       children,
       ...props
     },
-    ref,
+    ref
   ) => {
     const [searchQuery, setSearchQuery] = React.useState("");
+    const [languageFilter, setLanguageFilter] = React.useState<string | null>(
+      null
+    );
     const [isCollapsed, setIsCollapsed] = React.useState(defaultCollapsed);
     const [shouldFocusSearch, setShouldFocusSearch] = React.useState(false);
 
@@ -96,12 +102,18 @@ const ThreadHistory = React.forwardRef<HTMLDivElement, ThreadHistoryProps>(
       generateThreadName,
     } = useTamboThread();
 
+    // Get available languages from threads
+    const availableLanguages = React.useMemo(() => {
+      if (!threads?.items) return [];
+      return getAvailableLanguages(threads.items as any);
+    }, [threads?.items]);
+
     // Update CSS variable when sidebar collapses/expands
     React.useEffect(() => {
       const sidebarWidth = isCollapsed ? "3rem" : "16rem";
       document.documentElement.style.setProperty(
         "--sidebar-width",
-        sidebarWidth,
+        sidebarWidth
       );
     }, [isCollapsed]);
 
@@ -123,6 +135,9 @@ const ThreadHistory = React.forwardRef<HTMLDivElement, ThreadHistoryProps>(
         startNewThread,
         searchQuery,
         setSearchQuery,
+        languageFilter,
+        setLanguageFilter,
+        availableLanguages,
         isCollapsed,
         setIsCollapsed,
         onThreadChange,
@@ -140,13 +155,15 @@ const ThreadHistory = React.forwardRef<HTMLDivElement, ThreadHistoryProps>(
         switchCurrentThread,
         startNewThread,
         searchQuery,
+        languageFilter,
+        availableLanguages,
         isCollapsed,
         onThreadChange,
         contextKey,
         position,
         updateThreadName,
         generateThreadName,
-      ],
+      ]
     );
 
     return (
@@ -159,7 +176,7 @@ const ThreadHistory = React.forwardRef<HTMLDivElement, ThreadHistoryProps>(
             "border-flat bg-container h-screen fixed top-0 transition-all duration-300",
             position === "left" ? "border-r left-0" : "border-l right-0",
             isCollapsed ? "w-12" : "w-64",
-            className,
+            className
           )}
           {...props}
         >
@@ -171,7 +188,7 @@ const ThreadHistory = React.forwardRef<HTMLDivElement, ThreadHistoryProps>(
         </div>
       </ThreadHistoryContext.Provider>
     );
-  },
+  }
 );
 ThreadHistory.displayName = "ThreadHistory";
 
@@ -194,7 +211,7 @@ const ThreadHistoryHeader = React.forwardRef<
       className={cn(
         "flex items-center justify-between mb-4",
         isCollapsed ? "p-1" : "p-2",
-        className,
+        className
       )}
       {...props}
     >
@@ -205,7 +222,7 @@ const ThreadHistoryHeader = React.forwardRef<
         onClick={() => setIsCollapsed(!isCollapsed)}
         className={cn(
           "bg-container hover:bg-muted transition-colors p-1 hover:bg-backdrop rounded-md cursor-pointer",
-          position === "left" ? "ml-auto" : "",
+          position === "left" ? "ml-auto" : ""
         )}
         aria-label={isCollapsed ? "Expand sidebar" : "Collapse sidebar"}
       >
@@ -246,7 +263,7 @@ const ThreadHistoryNewButton = React.forwardRef<
         console.error("Failed to create new thread:", error);
       }
     },
-    [startNewThread, refetch, onThreadChange],
+    [startNewThread, refetch, onThreadChange]
   );
 
   React.useEffect(() => {
@@ -267,7 +284,7 @@ const ThreadHistoryNewButton = React.forwardRef<
       onClick={handleNewThread}
       className={cn(
         "flex items-center gap-2 rounded-md mb-4 hover:bg-backdrop transition-colors cursor-pointer",
-        isCollapsed ? "p-1 justify-center" : "p-2",
+        isCollapsed ? "p-1 justify-center" : "p-2"
       )}
       title="New thread"
       {...props}
@@ -305,7 +322,7 @@ const ThreadHistorySearch = React.forwardRef<
       className={cn(
         "mb-4",
         isCollapsed ? "flex justify-center" : "relative",
-        className,
+        className
       )}
       {...props}
     >
@@ -338,6 +355,65 @@ const ThreadHistorySearch = React.forwardRef<
 ThreadHistorySearch.displayName = "ThreadHistory.Search";
 
 /**
+ * Language filter component for filtering threads by language
+ */
+const ThreadHistoryLanguageFilter = React.forwardRef<
+  HTMLDivElement,
+  React.HTMLAttributes<HTMLDivElement>
+>(({ className, ...props }, ref) => {
+  const { languageFilter, setLanguageFilter, availableLanguages, isCollapsed } =
+    useThreadHistoryContext();
+
+  if (isCollapsed || availableLanguages.length === 0) return null;
+
+  const languageNames: Record<string, string> = {
+    en: "English",
+    es: "Español",
+    fr: "Français",
+    de: "Deutsch",
+    it: "Italiano",
+    pt: "Português",
+    ru: "Русский",
+    zh: "中文",
+    ja: "日本語",
+    ko: "한국어",
+  };
+
+  return (
+    <div ref={ref} className={cn("mb-4", className)} {...props}>
+      <div className="flex flex-wrap gap-1">
+        <button
+          onClick={() => setLanguageFilter(null)}
+          className={cn(
+            "text-xs px-2 py-1 rounded-md transition-colors",
+            languageFilter === null
+              ? "bg-primary text-primary-foreground"
+              : "bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground"
+          )}
+        >
+          All
+        </button>
+        {availableLanguages.map((lang) => (
+          <button
+            key={lang}
+            onClick={() => setLanguageFilter(lang)}
+            className={cn(
+              "text-xs px-2 py-1 rounded-md transition-colors",
+              languageFilter === lang
+                ? "bg-primary text-primary-foreground"
+                : "bg-muted hover:bg-muted/80 text-muted-foreground hover:text-foreground"
+            )}
+          >
+            {languageNames[lang] || lang.toUpperCase()}
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+});
+ThreadHistoryLanguageFilter.displayName = "ThreadHistory.LanguageFilter";
+
+/**
  * List of thread items
  */
 const ThreadHistoryList = React.forwardRef<
@@ -356,10 +432,11 @@ const ThreadHistoryList = React.forwardRef<
     updateThreadName,
     generateThreadName,
     refetch,
+    languageFilter,
   } = useThreadHistoryContext();
 
   const [editingThread, setEditingThread] = React.useState<TamboThread | null>(
-    null,
+    null
   );
   const [newName, setNewName] = React.useState("");
   const inputRef = React.useRef<HTMLInputElement>(null);
@@ -408,17 +485,52 @@ const ThreadHistoryList = React.forwardRef<
     const query = searchQuery.toLowerCase();
     return threads.items.filter((thread: TamboThread) => {
       const nameMatches = !!thread.name?.toLowerCase().includes(query);
-      return (
+
+      // Safety check for thread.messages
+      const contentMatches =
+        thread.messages && Array.isArray(thread.messages)
+          ? thread.messages.some((message) =>
+              message.content && Array.isArray(message.content)
+                ? message.content.some(
+                    (content) => !!content.text?.toLowerCase().includes(query)
+                  )
+                : false
+            )
+          : false;
+
+      // Check if thread matches text search
+      const textMatches =
         thread.id.toLowerCase().includes(query) ??
         nameMatches ??
-        thread.messages.some((message) =>
-          message.content.some(
-            (content) => !!content.text?.toLowerCase().includes(query),
-          ),
-        )
-      );
+        contentMatches;
+
+      // If no search query, just check language filter
+      if (!searchQuery) {
+        if (!languageFilter) return true;
+
+        // Check if any message in thread has the filtered language
+        return thread.messages && Array.isArray(thread.messages)
+          ? thread.messages.some((message) => {
+              const messageLang = extractTamboLanguage(message.content);
+              return messageLang === languageFilter;
+            })
+          : false;
+      }
+
+      // If search query exists, check both text and language
+      if (!textMatches) return false;
+
+      if (!languageFilter) return true;
+
+      // Check if any message in thread has the filtered language
+      return thread.messages && Array.isArray(thread.messages)
+        ? thread.messages.some((message) => {
+            const messageLang = extractTamboLanguage(message.content);
+            return messageLang === languageFilter;
+          })
+        : false;
     });
-  }, [isCollapsed, threads, searchQuery]);
+  }, [isCollapsed, threads, searchQuery, languageFilter]);
 
   const handleSwitchThread = async (threadId: string, e?: React.MouseEvent) => {
     if (e) e.stopPropagation();
@@ -499,7 +611,7 @@ const ThreadHistoryList = React.forwardRef<
             onClick={async () => await handleSwitchThread(thread.id)}
             className={cn(
               "p-2 rounded-md hover:bg-backdrop cursor-pointer group flex items-center justify-between",
-              currentThread?.id === thread.id ? "bg-muted" : "",
+              currentThread?.id === thread.id ? "bg-muted" : ""
             )}
           >
             {editingThread?.id === thread.id ? (
@@ -548,7 +660,7 @@ const ThreadHistoryList = React.forwardRef<
         isCollapsed
           ? "opacity-0 max-h-0 overflow-hidden pointer-events-none"
           : "opacity-100 max-h-full pointer-events-auto",
-        className,
+        className
       )}
       {...props}
     >
@@ -615,6 +727,7 @@ const ThreadOptionsDropdown = ({
 export {
   ThreadHistory,
   ThreadHistoryHeader,
+  ThreadHistoryLanguageFilter,
   ThreadHistoryList,
   ThreadHistoryNewButton,
   ThreadHistorySearch,

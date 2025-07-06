@@ -62,12 +62,12 @@ export default {
       entries: {
         "7/declaration/body/3/consequent/0/argument/1/1/1": {
           content: {
-            de: "Dieses Chat verwendet die Authentifizierung von tambo_ai mit better-auth. Verwenden Sie diese Chat-Einrichtung, indem Sie sich mit better-auth anmelden und dann hierher zurückkehren.",
+            de: "Dieser Chat verwendet die Authentifizierung von tambo_ai mit better-auth. Um diesen Chat zu nutzen, richten Sie better-auth ein und kehren Sie dann hierher zurück.",
             en: "This chat is using tambo_ai's authentication with better-auth. To use this chat setup better auth and then come back here.",
-            es: "Este chat está utilizando la autenticación de tambo_ai con better-auth. Para usar este chat, configura mejor la autenticación y luego vuelve aquí.",
-            fr: "Ce chat utilise l'authentification de tambo_ai avec better-auth. Pour utiliser cette configuration, configurez better auth puis revenez ici.",
+            es: "Este chat está utilizando la autenticación de tambo_ai con better-auth. Para usar este chat, configura better-auth y luego regresa aquí.",
+            fr: "Ce chat utilise l'authentification de tambo_ai avec better-auth. Pour utiliser ce chat, configurez better-auth puis revenez ici.",
           },
-          hash: "e44b6c508f9ebdaf2e8afd7b3ba27a24",
+          hash: "fd4c466567350b321a7b253bee5f8812",
         },
         "7/declaration/body/3/consequent/0/argument/1/1/3": {
           content: {
@@ -194,6 +194,24 @@ export default {
           },
           hash: "2287959cb715d8a77136a88447a9cb31",
         },
+        "3/declaration/body/6/argument/1/5/1/expression/alternate": {
+          content: {
+            de: "Keine Nachrichten mehr.",
+            en: "No messages left.",
+            es: "No hay mensajes.",
+            fr: "Aucun message.",
+          },
+          hash: "d865bdf0e56f516f073a0930a68685c4",
+        },
+        "3/declaration/body/6/argument/1/5/1/expression/consequent": {
+          content: {
+            de: "Verwendung: {balance} / {included_usage}",
+            en: "Usage: {balance} / {included_usage}",
+            es: "Uso: {balance} / {included_usage}",
+            fr: "Utilisation : {balance} / {included_usage}",
+          },
+          hash: "18aac7f9dff1ae8a52549292ebf13136",
+        },
         "3/declaration/body/6/argument/3/expression/right/1": {
           content: {
             de: "Keine Nachrichten mehr, bitte aufrüsten!",
@@ -211,6 +229,96 @@ export default {
             fr: "Mettre à niveau",
           },
           hash: "17637657e2e45e368776a8159750c076",
+        },
+        "3/declaration/body/7/argument/1/1-placeholder": {
+          content: {
+            de: "Hallo Chatbot!",
+            en: "Hi chatbot!",
+            es: "¡Hola chatbot!",
+            fr: "Salut chatbot !",
+          },
+          hash: "127c4f56f49cfcd6b51aad34b9c88557",
+        },
+        "3/declaration/body/7/argument/1/3": {
+          content: {
+            de: "Nachricht senden",
+            en: "Send Message",
+            es: "Enviar Mensaje",
+            fr: "Envoyer un message",
+          },
+          hash: "57b5da7d778fd6678dc3642e0120e32f",
+        },
+        "3/declaration/body/7/argument/1/5/1/expression/alternate": {
+          content: {
+            de: "Keine Nachrichten mehr.",
+            en: "No messages left.",
+            es: "No hay mensajes.",
+            fr: "Aucun message.",
+          },
+          hash: "d865bdf0e56f516f073a0930a68685c4",
+        },
+        "3/declaration/body/7/argument/1/5/1/expression/consequent": {
+          content: {
+            de: "Verwendung: {balance} / {included_usage}",
+            en: "Usage: {balance} / {included_usage}",
+            es: "Uso: {balance} / {included_usage}",
+            fr: "Utilisation : {balance} / {included_usage}",
+          },
+          hash: "18aac7f9dff1ae8a52549292ebf13136",
+        },
+        "3/declaration/body/7/argument/3/expression/right/1": {
+          content: {
+            de: "Keine Nachrichten mehr, bitte aufrüsten!",
+            en: "Out of messages, please upgrade!",
+            es: "Sin mensajes, ¡por favor actualiza!",
+            fr: "Plus de messages, veuillez mettre à niveau !",
+          },
+          hash: "9dcd562dd86729836ee591b4e9b16944",
+        },
+        "3/declaration/body/8/argument/1/1-placeholder": {
+          content: {
+            de: "Hallo Chatbot!",
+            en: "Hi chatbot!",
+            es: "¡Hola chatbot!",
+            fr: "Salut chatbot !",
+          },
+          hash: "127c4f56f49cfcd6b51aad34b9c88557",
+        },
+        "3/declaration/body/8/argument/1/3": {
+          content: {
+            de: "Nachricht senden",
+            en: "Send Message",
+            es: "Enviar Mensaje",
+            fr: "Envoyer un message",
+          },
+          hash: "57b5da7d778fd6678dc3642e0120e32f",
+        },
+        "3/declaration/body/8/argument/1/5/1/expression/alternate": {
+          content: {
+            de: "Keine Nachrichten mehr.",
+            en: "No messages left.",
+            es: "No hay mensajes.",
+            fr: "Aucun message.",
+          },
+          hash: "d865bdf0e56f516f073a0930a68685c4",
+        },
+        "3/declaration/body/8/argument/1/5/1/expression/consequent": {
+          content: {
+            de: "Verwendung: {balance} / {included_usage}",
+            en: "Usage: {balance} / {included_usage}",
+            es: "Uso: {balance} / {included_usage}",
+            fr: "Utilisation : {balance} / {included_usage}",
+          },
+          hash: "18aac7f9dff1ae8a52549292ebf13136",
+        },
+        "3/declaration/body/8/argument/3/expression/right/1/1": {
+          content: {
+            de: "Keine Nachrichten mehr, bitte aufrüsten!",
+            en: "Out of messages, please upgrade!",
+            es: "Sin mensajes, ¡por favor actualiza!",
+            fr: "Plus de messages, veuillez mettre à niveau !",
+          },
+          hash: "9dcd562dd86729836ee591b4e9b16944",
         },
       },
     },
@@ -345,6 +453,33 @@ export default {
           },
           hash: "845a06785985415fdd660983879f0356",
         },
+        "2/declaration/body/4/argument/1-placeholder": {
+          content: {
+            de: "URL",
+            en: "URL",
+            es: "URL",
+            fr: "URL",
+          },
+          hash: "ca97457614226960d41dd18c3c29c86b",
+        },
+        "2/declaration/body/4/argument/3/1/expression/alternate": {
+          content: {
+            de: "Scrapen",
+            en: "Scrape",
+            es: "Raspar",
+            fr: "Scraper",
+          },
+          hash: "a8412c6899bb1944e334e92e9a97f020",
+        },
+        "2/declaration/body/4/argument/3/1/expression/consequent": {
+          content: {
+            de: "Scrapen...",
+            en: "Scraping...",
+            es: "Raspando...",
+            fr: "Scraping...",
+          },
+          hash: "845a06785985415fdd660983879f0356",
+        },
       },
     },
     "components/firecrawl/result.tsx": {
@@ -371,6 +506,42 @@ export default {
     },
     "components/resend/form.tsx": {
       entries: {
+        "1/declaration/body/6/argument/1-placeholder": {
+          content: {
+            de: "Name",
+            en: "Name",
+            es: "Nombre",
+            fr: "Nom",
+          },
+          hash: "9368b5a047572b6051f334af5aa76819",
+        },
+        "1/declaration/body/6/argument/3-placeholder": {
+          content: {
+            de: "E-Mail",
+            en: "Email",
+            es: "Correo electrónico",
+            fr: "Email",
+          },
+          hash: "e7f34943a0c2fb849db1839ff6ef5cb5",
+        },
+        "1/declaration/body/6/argument/5/1/expression/alternate": {
+          content: {
+            de: "E-Mail senden",
+            en: "Send email",
+            es: "Enviar correo electrónico",
+            fr: "Envoyer l'email",
+          },
+          hash: "0ef83c0bb40de25921a9ee7fa05babec",
+        },
+        "1/declaration/body/6/argument/5/1/expression/consequent": {
+          content: {
+            de: "Senden...",
+            en: "Sending...",
+            es: "Enviando...",
+            fr: "Envoi...",
+          },
+          hash: "313baf79716ca9d57de864eaac4a602a",
+        },
         "2/declaration/body/6/argument/1/1-placeholder": {
           content: {
             de: "Name",
@@ -407,6 +578,56 @@ export default {
           },
           hash: "313baf79716ca9d57de864eaac4a602a",
         },
+      },
+    },
+    "components/resend/result.tsx": {
+      entries: {
+        "1/declaration/body/1/argument/1/1": {
+          content: {
+            de: "← Eine weitere E-Mail senden",
+            en: "← Send another email",
+            es: "← Enviar otro correo electrónico",
+            fr: "← Envoyer un autre e-mail",
+          },
+          hash: "d50842fc4d4c0ac7972c4ce701a9c282",
+        },
+        "1/declaration/body/1/argument/3/3/1": {
+          content: {
+            de: "Name:",
+            en: "Name:",
+            es: "Nombre:",
+            fr: "Nom :",
+          },
+          hash: "bdea9a2106a3d0cedcced851872a1abc",
+        },
+        "1/declaration/body/1/argument/3/5/1": {
+          content: {
+            de: "E-Mail:",
+            en: "Email:",
+            es: "Correo electrónico:",
+            fr: "E-mail :",
+          },
+          hash: "f08eeb8e3d27821c749230891b2aee12",
+        },
+        "1/declaration/body/1/argument/3/7/expression/right/1/1": {
+          content: {
+            de: "Fehler:",
+            en: "Error:",
+            es: "Error:",
+            fr: "Erreur :",
+          },
+          hash: "3ddcf6b8d7abb33d032d80a9c134cd09",
+        },
+        "1/declaration/body/1/argument/3/7/expression/right/3/expression/right/1":
+          {
+            content: {
+              de: "<expression/> Fehlerdetails",
+              en: "<expression/> error details",
+              es: "<expression/> detalles del error",
+              fr: "<expression/> détails de l'erreur",
+            },
+            hash: "b61c9c69bc38458f37b13e4265bc6f53",
+          },
       },
     },
     "components/tambo/index.tsx": {
@@ -509,6 +730,15 @@ export default {
     },
     "components/tambo/message-thread-full.tsx": {
       entries: {
+        "11/declaration/0/init/0/body/4/argument/5/7/7/1/1-placeholder": {
+          content: {
+            de: "Fragen Sie nach dem Scrapen einer Website oder dem Senden einer E-Mail",
+            en: "Ask to scrape a website or send an email",
+            es: "Pide raspar un sitio web o enviar un correo electrónico",
+            fr: "Demander de scraper un site web ou d'envoyer un email",
+          },
+          hash: "b57049fc2a99e0dd830b0070994bff08",
+        },
         "12/declaration/0/init/0/body/4/argument/5/7/7/1/1-placeholder": {
           content: {
             de: "Fragen Sie nach dem Scrapen einer Website oder dem Senden einer E-Mail",
@@ -611,6 +841,24 @@ export default {
     },
     "components/tambo/thread-history.tsx": {
       entries: {
+        "ThreadHistoryLanguageFilter/all": {
+          content: {
+            de: "Alle",
+            en: "All",
+            es: "Todos",
+            fr: "Tous",
+          },
+          hash: "thread-history-language-filter-all",
+        },
+        "ThreadHistoryHeader/title": {
+          content: {
+            de: "Tambo Unterhaltungen",
+            en: "Tambo Conversations",
+            es: "Conversaciones de Tambo",
+            fr: "Conversations Tambo",
+          },
+          hash: "thread-history-header-title",
+        },
         "11/0/init/0/body/1/argument/1/expression/right": {
           content: {
             de: "Tambo Gespräche",
@@ -674,6 +922,33 @@ export default {
           },
           hash: "a4be30f2c934f0135e76077f397d4b8e",
         },
+        "17/0/init/0/body/3/argument/1/1": {
+          content: {
+            de: "Alle",
+            en: "All",
+            es: "Todos",
+            fr: "Tous",
+          },
+          hash: "1e231f4b008d575c987c67c5529b36b9",
+        },
+        "19/0/init/0/body/13/alternate/consequent/0/expression/right": {
+          content: {
+            de: "Fehler beim Laden der Threads",
+            en: "Error loading threads",
+            es: "Error al cargar hilos",
+            fr: "Erreur de chargement des fils",
+          },
+          hash: "395d718df3af6729b8a49470906a929f",
+        },
+        "19/0/init/0/body/13/consequent/0/expression/right": {
+          content: {
+            de: "Threads werden geladen...",
+            en: "Loading threads...",
+            es: "Cargando hilos...",
+            fr: "Chargement des fils...",
+          },
+          hash: "a4be30f2c934f0135e76077f397d4b8e",
+        },
         "19/0/init/body/0/argument/3/1/1": {
           content: {
             de: "<element:Pencil></element:Pencil> Umbenennen",
@@ -684,6 +959,24 @@ export default {
           hash: "5536257c315f8251caeeb23755aeab86",
         },
         "19/0/init/body/0/argument/3/1/3": {
+          content: {
+            de: "<element:Sparkles></element:Sparkles> Namen generieren",
+            en: "<element:Sparkles></element:Sparkles> Generate Name",
+            es: "<element:Sparkles></element:Sparkles> Generar nombre",
+            fr: "<element:Sparkles></element:Sparkles> Générer un nom",
+          },
+          hash: "e4ce714b58ee52dcf102252cb171368c",
+        },
+        "21/0/init/body/0/argument/3/1/1": {
+          content: {
+            de: "<element:Pencil></element:Pencil> Umbenennen",
+            en: "<element:Pencil></element:Pencil> Rename",
+            es: "<element:Pencil></element:Pencil> Renombrar",
+            fr: "<element:Pencil></element:Pencil> Renommer",
+          },
+          hash: "5536257c315f8251caeeb23755aeab86",
+        },
+        "21/0/init/body/0/argument/3/1/3": {
           content: {
             de: "<element:Sparkles></element:Sparkles> Namen generieren",
             en: "<element:Sparkles></element:Sparkles> Generate Name",

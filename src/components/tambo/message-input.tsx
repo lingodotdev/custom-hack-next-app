@@ -1,6 +1,6 @@
 "use client";
 
-import { cn } from "@/lib/utils";
+import { cn, getCurrentLocale, stripTamboLanguageContext } from "@/lib/utils";
 import { useTamboThread, useTamboThreadInput } from "@tambo-ai/react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { ArrowUp, Square } from "lucide-react";
@@ -115,14 +115,57 @@ const MessageInput = React.forwardRef<HTMLFormElement, MessageInputProps>(
       useTamboThreadInput(contextKey);
     const [displayValue, setDisplayValue] = React.useState("");
     const [submitError, setSubmitError] = React.useState<string | null>(null);
+    const [isSubmitting, setIsSubmitting] = React.useState(false);
     const textareaRef = React.useRef<HTMLTextAreaElement>(null);
 
     React.useEffect(() => {
-      setDisplayValue(value);
+      // Don't update display during submission to prevent flashing
+      if (isSubmitting) return;
+
+      // Filter out the language context from the display value
+      setDisplayValue(stripTamboLanguageContext(value));
       if (value && textareaRef.current) {
         textareaRef.current.focus();
       }
-    }, [value]);
+    }, [value, isSubmitting]);
+
+    // Create a wrapper for submit that includes language context
+    const submitWithLanguage = React.useCallback(
+      async (options: { contextKey?: string; streamResponse?: boolean }) => {
+        const userLocale = getCurrentLocale();
+        // Use a very unlikely delimiter that users would never accidentally type
+        const messageWithLanguage = `<<<TAMBO_LANG:${userLocale}>>>|||${value}`;
+
+        // Store the original value for restoration if needed
+        const originalValue = value;
+
+        try {
+          // Set submitting flag to prevent display updates
+          setIsSubmitting(true);
+
+          // Clear the display immediately to prevent flashing
+          setDisplayValue("");
+
+          // Set the enhanced message for submission
+          setValue(messageWithLanguage);
+
+          // Submit immediately
+          await submit(options);
+
+          // Clear the input after successful submission
+          setValue("");
+        } catch (error) {
+          // Restore the original value on error
+          setValue(originalValue);
+          setDisplayValue(originalValue);
+          throw error;
+        } finally {
+          // Always clear the submitting flag
+          setIsSubmitting(false);
+        }
+      },
+      [value, setValue, submit, setDisplayValue]
+    );
 
     const handleSubmit = React.useCallback(
       async (e: React.FormEvent) => {
@@ -132,7 +175,7 @@ const MessageInput = React.forwardRef<HTMLFormElement, MessageInputProps>(
         setSubmitError(null);
         setDisplayValue("");
         try {
-          await submit({
+          await submitWithLanguage({
             contextKey,
             streamResponse: true,
           });
@@ -150,7 +193,14 @@ const MessageInput = React.forwardRef<HTMLFormElement, MessageInputProps>(
           );
         }
       },
-      [value, submit, contextKey, setValue, setDisplayValue, setSubmitError]
+      [
+        value,
+        submitWithLanguage,
+        contextKey,
+        setValue,
+        setDisplayValue,
+        setSubmitError,
+      ]
     );
 
     const contextValue = React.useMemo(
